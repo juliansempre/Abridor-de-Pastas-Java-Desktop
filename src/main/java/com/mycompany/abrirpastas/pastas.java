@@ -12,6 +12,7 @@ package com.mycompany.abrirpastas;
 import java.awt.Desktop;
 import java.io.File;
 import java.io.IOException;
+import java.net.URI;
 
 public class pastas {
        public void abrirpastadir(String caminho){
@@ -61,6 +62,16 @@ public class pastas {
         public void coreldraw(){abrirpastadir("C:/Users/Meu Computador/OneDrive/Todos truques de informatica/Edição Gráfica/Biblioteca/Corel draw.txt");}
         public void bancodeimagens(){abrirpastadir("X:/");}
         public void pecas(){abrirpastadir("X:/peças redes sociais");}
-   
+        public void fontes(){abrirpastadir("C:/Windows/Fonts");}
+        public void vetores(){abrirpastadir("X:/vetores");}
+        public void whats(String numero){
+                try{
+                URI link = new URI("https://wa.me/"+numero);
+                Desktop.getDesktop().browse(link);
+                }catch(Exception erro){
+                System.out.println(erro);
+                }
+    }
+           
     
 }
