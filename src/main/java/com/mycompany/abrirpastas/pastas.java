@@ -72,6 +72,15 @@ public class pastas {
                 System.out.println(erro);
                 }
     }
+        //email
+         public void email (String busca){
+                try{
+                URI link = new URI("https://mail.google.com/mail/u/0/#search/"+busca);
+                Desktop.getDesktop().browse(link);
+                }catch(Exception erro){
+                System.out.println(erro);
+                }
+    }
            
     
 }
